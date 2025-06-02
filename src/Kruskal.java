@@ -1,15 +1,9 @@
-package tsp;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Constrói a MST pelo algoritmo de Kruskal (2-aproximação do TSP).
- */
 public class Kruskal {
 
-    /** Representa uma aresta entre u e v com peso w. */
     public static class Edge {
         public final int u, v, w;
 
@@ -20,7 +14,6 @@ public class Kruskal {
         }
     }
 
-    /** Estrutura Union-Find com path compression e union by rank. */
     public static class DisjointSet {
         private final int[] parent, rank;
 
@@ -43,9 +36,6 @@ public class Kruskal {
         }
     }
 
-    /**
-     * Retorna a lista de arestas da MST de um grafo completo dado pela matriz dist[][].
-     */
     public static List<Edge> buildMST(int[][] dist) {
         int n = dist.length;
         List<Edge> edges = new ArrayList<>();
@@ -68,4 +58,3 @@ public class Kruskal {
         return mst;
     }
 }
-

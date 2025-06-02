@@ -1,5 +1,3 @@
-package tsp;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,9 +5,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Lê um arquivo de texto onde cada linha é uma linha da matriz de adjacência, valores separados por espaços.
- */
 public class MatrixReader {
     public static int[][] readMatrix(String path) throws IOException {
         List<int[]> rows = new ArrayList<>();
@@ -23,7 +18,6 @@ public class MatrixReader {
                 }
                 rows.add(row);
             }
-            // Converte List<int[]> para int[][]
             return rows.toArray(new int[rows.size()][]);
         }
     }
