@@ -2,8 +2,8 @@
 
 Este repositório contém um programa Java para resolver o Problema do Caixeiro Viajante (TSP) de duas maneiras:
 
-1. **Solver Aproximativo** (heurística).
-2. **Solver Exato** (força bruta com poda, limitado a instâncias pequenas).
+1. **Solver Aproximativo** (2-aproximativo via MST).
+2. **Solver Exato** (Held-Karp: força bruta com poda, limitado a instâncias pequenas).
 
 O objetivo é comparar, para cada instância, o custo (distância total) e o tempo médio de execução de ambas as abordagens.
 
@@ -12,7 +12,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
 ## 📁 Estrutura de Pastas
 
 ```
-/meu-projeto
+/tsp-solver
 │
 ├─ /src
 │   ├─ Main.java
@@ -111,17 +111,6 @@ mkdir bin
 javac -d bin src/*.java
 ```
 
-* A opção `-d bin` faz com que os arquivos `.class` sejam gerados dentro da pasta `bin/`, respeitando pacotes (se houver).
-* Se existirem subpacotes sob `src/`, utilize:
-
-  ```sh
-  javac -d bin $(find src -name "*.java")
-  ```
-
-  (ou equivalente no Windows: `dir /s /b src\*.java | javac -d bin @-`).
-
----
-
 ## ▶️ Como Executar
 
 ### A. Rodar via menu (sem argumentos)
@@ -129,7 +118,6 @@ javac -d bin src/*.java
 Depois de compilado:
 
 ```sh
-cd /caminho/para/projeto
 java -cp bin Main
 ```
 
