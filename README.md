@@ -54,7 +54,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
 
 2. **TSPSolver.java**
 
-   * Interface (ou classe abstrata) que define o método:
+   * Interface que define o método:
 
      ```java
      TSPSolution solve(int[][] dist);
@@ -62,7 +62,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
    * `TSPSolution` contém, no mínimo:
 
      * `long cost;` → custo da rota encontrada.
-     * (Opcional) ciclo ou lista de vértices.
+    
 
 3. **ApproxSolver.java** (Heurística Aproximativa)
 
