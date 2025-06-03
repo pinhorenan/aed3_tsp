@@ -9,7 +9,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
 
 ---
 
-## 📁 Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 /tsp-solver
@@ -35,7 +35,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
 
 ---
 
-## 📖 Descrição Geral
+## Descrição Geral
 
 1. **MatrixReader.java**
 
@@ -87,7 +87,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
      3. Executa o **Warm-Up** (executa o solver aproximativo e o exato 2 vezes cada, descartando os resultados, apenas para “aquecer” a JIT).
      4. Roda o **Bench-Mark** (10 repetições) para:
 
-        * **Heurística (aproximativo)**: mede custo (primeira run) e tempo de cada run.
+        * **Aproximamtivo**: mede custo (primeira run) e tempo de cada run.
         * **Exato** (apenas se `n ≤ MAX_EXACT_N`): mede custo (primeira run) e tempo de cada run, caso contrário escreve “pulado”.
      5. Escreve, num arquivo de **log** (`results_<timestamp>.txt`), todos os detalhes de custo e tempo de cada run.
      6. Exibe no **console** um resumo simplificado para aquela instância (custo e tempo médio).
@@ -95,7 +95,7 @@ O objetivo é comparar, para cada instância, o custo (distância total) e o tem
 
 ---
 
-## ⚙ Como Compilar
+## Como Compilar
 
 ### 1. Criar diretório de saída
 
@@ -111,7 +111,7 @@ mkdir bin
 javac -d bin src/*.java
 ```
 
-## ▶️ Como Executar
+## Como Executar
 
 ### A. Rodar via menu (sem argumentos)
 
@@ -174,7 +174,7 @@ java -cp bin Main instances/tsp2_1248.txt
 
 ---
 
-## 📝 Formato do Log
+## Formato do Log
 
 O arquivo de log é criado em tempo de execução como `results_<yyyyMMdd_HHmmss>.txt`.
 Exemplo de conteúdo (resumido):
@@ -210,7 +210,7 @@ Instância: instances/tsp3_1194.txt (n=15)
 
 ---
 
-## 📊 Resumo dos Algoritmos
+## Resumo dos Algoritmos
 
 1. **Heurística Aproximativa (`ApproxSolver`)**
 
@@ -240,7 +240,7 @@ Instância: instances/tsp3_1194.txt (n=15)
 
 ---
 
-## 💻 Exemplo de Uso Completo
+## Exemplo de Uso Completo
 
 1. **Compilar**:
 
@@ -265,7 +265,7 @@ Instância: instances/tsp3_1194.txt (n=15)
 
 ---
 
-## 🎯 Resultados Esperados
+## Resultados Esperados
 
 Após terminar a execução (menu ou único), haverá:
 
@@ -287,17 +287,15 @@ Use estes resultados para avaliar a qualidade da heurística comparada ao métod
 
 ---
 
-## 🛠 Requisitos e Dependências
+## Requisitos e Dependências
 
 * **JDK 8+** (ou qualquer versão Java compatível).
 * Nenhuma biblioteca externa adicional (apenas bibliotecas padrão Java).
 
 ---
 
-## 📄 Considerações Finais
+## Considerações Finais
 
 Este programa foi desenvolvido como **trabalho acadêmico** para comparar desempenho (custo e tempo) de algoritmos de TSP.
-
-Para dúvidas ou comentários pontuais, revise o código-fonte ou entre em contato com o autor do trabalho.
 
 ---
